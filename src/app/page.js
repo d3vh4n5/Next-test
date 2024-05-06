@@ -2,7 +2,14 @@ import Test from "@/components/Test";
 
 async function fetchData(){
   // const response = await fetch('https://jsonplaceholder.typicode.com/users')
-  const response = await fetch('https://next-test-gules-chi.vercel.app/api/test')
+  
+  // midu: https://www.youtube.com/watch?v=tA-_vAz9y78&t=4139s
+  // const response = await fetch('https://next-test-gules-chi.vercel.app/api/test', { cache: 'no-store' }) // Ahora se genera cuando se llama a la web
+  const response = await fetch('https://next-test-gules-chi.vercel.app/api/test', { 
+    next: {
+      revalidate: 60
+    }
+   }) // Ahora se genera cuando se llama a la web
   return response.json()
 }
 
@@ -15,7 +22,7 @@ export default async function Home() {
 
   return (
     <main className="">
-      <h1>Hola <b>{users[0].name}</b></h1>
+      <h1>Hola <b>{users[1].name}</b></h1>
       <Test />
     </main>
   );

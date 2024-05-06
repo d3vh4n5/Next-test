@@ -22,7 +22,7 @@ const Test = () => {
         <button 
           onClick={cargarUsuarios}
           className="bg-white/10 py-1 px-2 rounded"
-          >Boton</button>
+          >Cargar usuarios</button>
         <div className="p-3 border-orange-300 border m-4">
 
         {
