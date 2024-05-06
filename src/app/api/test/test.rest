@@ -1,0 +1,8 @@
+# Plugin: Rest Client
+
+POST http://localhost:3000/api/test 
+Content-Type: application/json 
+
+{
+    "origin": "test.rest"
+}
