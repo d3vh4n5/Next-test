@@ -1,7 +1,7 @@
 import Test from "@/components/Test";
 
 async function fetchData(){
-  const response = await fetch('http://localhost:3000/api/test')
+  const response = await fetch('https://jsonplaceholder.typicode.com/users')
   return response.json()
 }
 
